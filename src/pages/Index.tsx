@@ -26,17 +26,39 @@ export default function Index() {
   return (
     <div className="min-h-screen pb-16">
       {/* Hero Section */}
-      <header className="relative bg-gradient-cinema border-b border-border/50">
-        <div className="container mx-auto px-4 py-12">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="p-3 bg-gradient-hero rounded-lg shadow-cinema">
-              <Film className="w-8 h-8 text-primary-foreground" />
+      <header className="relative bg-gradient-cinema border-b border-border/50 overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1920&q=80')] bg-cover bg-center opacity-5" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
+
+        <div className="container mx-auto px-4 py-20 relative">
+          <div className="max-w-4xl mx-auto text-center space-y-6">
+            <div className="inline-flex items-center gap-3 mb-6 animate-float">
+              <div className="p-4 bg-gradient-hero rounded-2xl shadow-cinema">
+                <Film className="w-12 h-12 text-primary-foreground" />
+              </div>
             </div>
-            <div>
-              <h1 className="text-4xl font-bold bg-gradient-hero bg-clip-text text-transparent">
-                CineMatch
-              </h1>
-              <p className="text-muted-foreground">Your Personal Movie Recommendation Engine</p>
+
+            <h1 className="text-6xl md:text-7xl font-bold bg-gradient-hero bg-clip-text text-transparent mb-4 animate-slide-in">
+              CineMatch
+            </h1>
+
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto animate-slide-in">
+              Discover your next favorite movie with personalized recommendations powered by your unique taste
+            </p>
+
+            <div className="flex flex-wrap items-center justify-center gap-6 pt-4 text-sm text-muted-foreground animate-slide-in">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-primary animate-glow" />
+                <span>Smart Recommendations</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-secondary animate-glow" />
+                <span>Personal Ratings</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-accent animate-glow" />
+                <span>View History</span>
+              </div>
             </div>
           </div>
         </div>
